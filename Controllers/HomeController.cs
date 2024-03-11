@@ -20,7 +20,11 @@ namespace ZJAllemanWeb.Controllers
 
         public IActionResult Resume()
         {
-            ViewBag.Message = "Security is important.";
+            return View();
+        }
+
+        public IActionResult About()
+        {
             return View();
         }
 
