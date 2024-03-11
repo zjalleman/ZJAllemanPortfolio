@@ -18,7 +18,7 @@ namespace ZJAllemanWeb.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Resume()
         {
             ViewBag.Message = "Security is important.";
             return View();

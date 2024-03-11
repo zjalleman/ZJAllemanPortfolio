@@ -10,4 +10,8 @@
     <None Include="wwwroot\content\images\Zach.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\content\text\" />
+  </ItemGroup>
+
 </Project>
