@@ -1,29 +1,46 @@
-﻿@model ZJAllemanWeb.Models.Demo1UserModel
+﻿@model ZJAllemanWeb.Models.UserModel
 
 <h1>Authentication Demo</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Login">
+        <form asp-action="ProcessLogin">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @if (ViewBag.isFailedLogin)
+            {
+                <div class="text-danger">Login failed!</div>
+            }
+
+            @if (ViewBag.isFailedCreation)
+            {
+                <div class="text-danger">Account creation failed!</div>
+            }
+            
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
                 <input asp-for="UserName" class="form-control" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Login" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="CreateAccount">Create Account</a>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Home</a>
 </div>
 

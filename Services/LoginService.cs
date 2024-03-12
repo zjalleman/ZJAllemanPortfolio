@@ -2,13 +2,18 @@
 
 namespace ZJAllemanWeb.Services
 {
-    public class AuthenticationService
+    public class LoginService
     {
         UsersDAO usersDAO = new UsersDAO();
 
-        public bool IsValid(Demo1UserModel user)
+        public bool IsValid(UserModel user)
         {
             return usersDAO.FindUserByNameAndPassword(user);
+        }
+
+        public UserModel CreateAccount(UserModel user)
+        {
+            return usersDAO.CreateAccount(user);
         }
     }
 }
