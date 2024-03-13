@@ -1,5 +1,6 @@
 ﻿@model ZJAllemanWeb.Models.UserModel
 
+
 <h1>Authentication Demo</h1>
 <hr />
 <div class="row">
@@ -7,12 +8,12 @@
         <form asp-action="ProcessLogin">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            @if (ViewBag.isFailedLogin)
+            @if (ViewBag.isFailedLogin != null && ViewBag.isFailedLogin)
             {
                 <div class="text-danger">Login failed!</div>
             }
 
-            @if (ViewBag.isFailedCreation)
+            @if (ViewBag.isFailedCreation != null && ViewBag.isFailedCreation)
             {
                 <div class="text-danger">Account creation failed!</div>
             }

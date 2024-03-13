@@ -13,5 +13,8 @@ namespace ZJAllemanWeb.Models
 
         [StringLength(20, MinimumLength = 4)]
         public required string Password { get; set; }
+
+        [DisplayName("Hashed Password")]
+        public string HashedPassword { get; set; } = string.Empty;
     }
 }

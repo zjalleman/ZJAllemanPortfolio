@@ -6,6 +6,7 @@ namespace ZJAllemanWeb.Controllers
 {
     public class LoginController : Controller
     {
+
         public IActionResult Login()
         {
             ViewBag.isFailedLogin = false;
